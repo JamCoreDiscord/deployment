@@ -12,6 +12,7 @@ app.get("/ping", (req, res, next) => {
 app.post("/notify", (req, res, next) => {
     //Input will be: {"build_url": https://github.com/JamCoreDiscord/builds/tree/main/...}
     var url = req.body.build_url
+    url = url.replace("tree", "raw")
     console.log("Recieived update with URL: " + url)
 
     res.sendStatus(200)
