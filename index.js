@@ -31,7 +31,7 @@ app.post("/notify", (req, res, next) => {
   }
 });
 
-app.post("/deploy/dog", (req, res, next) => {
+app.post("/dog/deploy", (req, res, next) => {
   childProcess;
   childProcess.exec(
     "./deploy.sh",
