@@ -32,10 +32,10 @@ app.post("/notify", (req, res, next) => {
 });
 
 app.post("/dog/deploy", (req, res, next) => {
-  childProcess;
+  res.sendStatus(200);
   childProcess.exec(
     "./deploy.sh",
-    { cwd: "~/DogWebsite" },
+    { cwd: "../DogWebsite/" },
     (error, stdout, stderr) => {
       console.log(stdout);
       console.log(stderr);
